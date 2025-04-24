@@ -15,8 +15,8 @@ class CustomNavbar extends StatelessWidget {
     List<IconData> icons = [
       Icons.home_outlined,
       Icons.favorite_border,
-      Icons.shopping_bag_outlined,
-      Icons.notifications_none,
+      Icons.delivery_dining_outlined,
+      Icons.chat_outlined,
       Icons.person_outline,
     ];
 

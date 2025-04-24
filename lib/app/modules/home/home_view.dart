@@ -1,6 +1,7 @@
+import 'package:e_co/app/modules/cart/cart_view.dart';
 import 'package:e_co/app/modules/home/home_controller.dart';
+import 'package:e_co/app/modules/profile/profile_view.dart';
 import 'package:e_co/app/modules/wishlist/wishlist_view.dart';
-import 'package:e_co/app/routes/app_pages.dart';
 import 'package:e_co/app/utils/helpers.dart';
 import 'package:e_co/widgets/homeW/CategoryDialogContent.dart';
 import 'package:e_co/widgets/homeW/auto_scrol_panel.dart';
@@ -27,8 +28,9 @@ class HomeView extends StatelessWidget {
                     children: [
                       homeContent(), // 0
                       WishlistView(), // 1
-                      // ShopTabContent(),        // 2
-                      // NotificationsTabContent(), // 3
+                      cartView(), // 2
+                      cartView(), // 2
+                      ProfilePage(), // 3
                       // ProfileTabContent(),     // 4
                     ],
                   )),
@@ -77,7 +79,7 @@ class homeContent extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.notifications_none),
                 color: Colors.brown,
-                onPressed: () => Get.toNamed(Routes.wishlist),
+                onPressed: () {},
               ),
             ],
           ),
