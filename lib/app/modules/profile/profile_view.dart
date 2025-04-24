@@ -9,7 +9,7 @@ class ProfilePage extends StatelessWidget {
     {
       "icon": Icons.assignment_outlined,
       "label": "My cart",
-      'ontap': cartView()
+      'ontap': CartView()
     },
     {"icon": Icons.settings_outlined, "label": "Settings"},
     {"icon": Icons.help_outline, "label": "Help Center"},

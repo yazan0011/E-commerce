@@ -1,9 +1,17 @@
+import 'dart:async';
+
+import 'package:e_co/app/utils/helpers.dart';
+import 'package:e_co/widgets/cartW/deletion_dialog.dart';
+import 'package:e_co/widgets/cartW/summary_row.dart';
+import 'package:e_co/widgets/publicW/elevated_button.dart';
+import 'package:e_co/widgets/publicW/text_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'cart_controller.dart';
 
-class cartView extends StatelessWidget {
+class CartView extends StatelessWidget {
   final CartController controller = Get.put(CartController());
+  final TextEditingController tcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +39,31 @@ class cartView extends StatelessWidget {
                         padding: EdgeInsets.only(right: 20),
                         child: Icon(Icons.delete, color: Colors.white),
                       ),
+
+                      // ✅ تأكيد الحذف قبل تنفيذه
+                      confirmDismiss: (_) async {
+                        final completer = Completer<bool>();
+
+                        showCustomAnimatedDialog(
+                          context,
+                          child: ConfirmDeleteDialog(
+                            onConfirm: () {
+                              completer.complete(true);
+                              Navigator.of(context).pop(); // يغلق الدايالوج
+                            },
+                            onCancel: () {
+                              completer.complete(false);
+                              Navigator.of(context).pop(); // يغلق الدايالوج
+                            },
+                          ),
+                        );
+
+                        return completer.future;
+                      },
+
+                      // ✅ حذف العنصر فقط إذا وافق المستخدم
                       onDismissed: (_) => controller.removeItem(index),
+
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 15, vertical: 8),
@@ -93,24 +125,14 @@ class cartView extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: "Promo Code",
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12)),
-                            ),
-                          ),
-                        ),
+                            flex: 3,
+                            child: CustomTextField(
+                                hintText: 'promo code',
+                                controller: tcontroller)),
                         SizedBox(width: 10),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFF4D2C1E),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12)),
-                          ),
-                          onPressed: () {},
-                          child: Text("Apply"),
-                        ),
+                        Expanded(
+                            child: CustomElevatedButton(
+                                onPressed: () {}, text: 'Apply'))
                       ],
                     ),
                     SizedBox(height: 15),
@@ -124,41 +146,14 @@ class cartView extends StatelessWidget {
                     SummaryRow("Total Cost",
                         "\$${controller.totalCost.toStringAsFixed(2)}"),
                     SizedBox(height: 15),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF4D2C1E),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30)),
-                        minimumSize: Size(double.infinity, 50),
-                      ),
-                      onPressed: () {},
-                      child: Text("Proceed to Checkout"),
-                    ),
+                    //
+                    CustomElevatedButton(
+                        onPressed: () {}, text: "Proceed to Checkout")
                   ],
                 ),
               ),
             ],
           )),
-    );
-  }
-}
-
-class SummaryRow extends StatelessWidget {
-  final String label;
-  final String value;
-  SummaryRow(this.label, this.value);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 3),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(label),
-          Text(value, style: TextStyle(fontWeight: FontWeight.bold)),
-        ],
-      ),
     );
   }
 }

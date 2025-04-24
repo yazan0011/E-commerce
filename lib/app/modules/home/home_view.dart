@@ -28,8 +28,8 @@ class HomeView extends StatelessWidget {
                     children: [
                       homeContent(), // 0
                       WishlistView(), // 1
-                      cartView(), // 2
-                      cartView(), // 2
+                      CartView(), // 2
+                      CartView(), // 2
                       ProfilePage(), // 3
                       // ProfileTabContent(),     // 4
                     ],
