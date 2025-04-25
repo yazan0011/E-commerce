@@ -1,4 +1,5 @@
 import 'package:e_co/app/modules/wishlist/wishlist_controller.dart';
+import 'package:e_co/app/utils/constants.dart';
 import 'package:e_co/widgets/homeW/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,9 +19,9 @@ class WishlistView extends StatelessWidget {
             child: const Text("My Wishlist"),
           ),
           bottom: TabBar(
-            indicatorColor: Colors.brown,
+            indicatorColor: AppColors.primary,
             isScrollable: true,
-            labelColor: Colors.brown,
+            labelColor: AppColors.primary,
             unselectedLabelColor: Colors.grey,
             tabs: controller.categories.map((c) => Tab(text: c)).toList(),
           ),

@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'WinkySans',
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.brown,
         useMaterial3: true,
       ),
       home: const SplashView(),

@@ -1,5 +1,6 @@
 import 'package:e_co/app/modules/details/details_binding.dart';
 import 'package:e_co/app/modules/details/details_view.dart';
+import 'package:e_co/app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -80,7 +81,7 @@ class ProductCard extends StatelessWidget {
                 const Spacer(),
                 Icon(
                   wish == 0 ? Icons.favorite_border : Icons.favorite,
-                  color: Colors.brown,
+                  color: AppColors.primary,
                 ),
               ],
             ),

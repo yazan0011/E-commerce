@@ -1,3 +1,4 @@
+import 'package:e_co/app/utils/constants.dart';
 import 'package:e_co/widgets/homeW/category_icon.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +70,7 @@ class CategoryDialogContent extends StatelessWidget {
                 icon: const Icon(Icons.close),
                 label: const Text("Close"),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.brown,
+                  backgroundColor: AppColors.primary,
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),

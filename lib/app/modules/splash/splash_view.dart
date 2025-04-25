@@ -1,4 +1,5 @@
 import 'package:e_co/app/modules/onboarding/onboarding_view.dart';
+import 'package:e_co/app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -39,7 +40,7 @@ class _SplashViewState extends State<SplashView>
           width: double.infinity,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-                colors: [Colors.brown, Color.fromARGB(255, 180, 153, 142)],
+                colors: [AppColors.primary, Color.fromARGB(255, 180, 153, 142)],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter),
           ),

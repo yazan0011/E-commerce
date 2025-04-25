@@ -1,5 +1,6 @@
 import 'package:e_co/app/modules/home/home_binding.dart';
 import 'package:e_co/app/modules/home/home_view.dart';
+import 'package:e_co/app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -163,7 +164,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   effect: WormEffect(
                     dotHeight: 10,
                     dotWidth: 10,
-                    activeDotColor: Colors.brown,
+                    activeDotColor: AppColors.primary,
                     dotColor: Colors.grey.shade300,
                   ),
                 ),
@@ -185,7 +186,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.brown,
+                  backgroundColor: AppColors.primary,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),

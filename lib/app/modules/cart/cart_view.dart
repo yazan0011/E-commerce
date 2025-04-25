@@ -57,7 +57,6 @@ class CartView extends StatelessWidget {
                             },
                           ),
                         );
-
                         return completer.future;
                       },
 

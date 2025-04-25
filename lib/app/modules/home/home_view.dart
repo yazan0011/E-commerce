@@ -2,6 +2,7 @@ import 'package:e_co/app/modules/cart/cart_view.dart';
 import 'package:e_co/app/modules/home/home_controller.dart';
 import 'package:e_co/app/modules/profile/profile_view.dart';
 import 'package:e_co/app/modules/wishlist/wishlist_view.dart';
+import 'package:e_co/app/utils/constants.dart';
 import 'package:e_co/app/utils/helpers.dart';
 import 'package:e_co/widgets/homeW/CategoryDialogContent.dart';
 import 'package:e_co/widgets/homeW/auto_scrol_panel.dart';
@@ -70,7 +71,7 @@ class homeContent extends StatelessWidget {
             children: [
               Row(
                 children: const [
-                  Icon(Icons.location_on, color: Colors.brown),
+                  Icon(Icons.location_on, color: AppColors.primary),
                   SizedBox(width: 4),
                   Text("New York, USA",
                       style: TextStyle(fontWeight: FontWeight.bold)),
@@ -78,7 +79,7 @@ class homeContent extends StatelessWidget {
               ),
               IconButton(
                 icon: Icon(Icons.notifications_none),
-                color: Colors.brown,
+                color: AppColors.primary,
                 onPressed: () {},
               ),
             ],
@@ -92,7 +93,7 @@ class homeContent extends StatelessWidget {
             ),
             child: Row(
               children: const [
-                Icon(Icons.search, color: Colors.brown),
+                Icon(Icons.search, color: AppColors.primary),
                 SizedBox(width: 8),
                 Expanded(
                   child: TextField(
@@ -100,7 +101,7 @@ class homeContent extends StatelessWidget {
                         border: InputBorder.none, hintText: 'Search'),
                   ),
                 ),
-                Icon(Icons.tune, color: Colors.brown),
+                Icon(Icons.tune, color: AppColors.primary),
               ],
             ),
           ),
@@ -125,7 +126,7 @@ class homeContent extends StatelessWidget {
                 },
                 child: const Text(
                   "See All",
-                  style: TextStyle(color: Colors.brown),
+                  style: TextStyle(color: AppColors.primary),
                 ),
               ),
             ],
@@ -165,7 +166,7 @@ class homeContent extends StatelessWidget {
                           child: Chip(
                             backgroundColor:
                                 controller.selectedCategory.value == cat
-                                    ? Colors.brown
+                                    ? AppColors.primary
                                     : Colors.grey.shade200,
                             label: Text(cat,
                                 style: TextStyle(

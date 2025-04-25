@@ -1,3 +1,4 @@
+import 'package:e_co/app/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CategoryIcon extends StatelessWidget {
@@ -12,7 +13,7 @@ class CategoryIcon extends StatelessWidget {
       children: [
         CircleAvatar(
           backgroundColor: Colors.brown.shade100,
-          child: Icon(icon, color: Colors.brown),
+          child: Icon(icon, color: AppColors.primary),
         ),
         const SizedBox(height: 4),
         Text(label),

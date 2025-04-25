@@ -1,4 +1,5 @@
 import 'package:e_co/app/modules/cart/cart_view.dart';
+import 'package:e_co/app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -49,7 +50,7 @@ class ProfilePage extends StatelessWidget {
                     backgroundColor: Colors.grey,
                     child: CircleAvatar(
                       radius: 14,
-                      backgroundColor: Color(0xFF4D2C1E),
+                      backgroundColor: AppColors.primary,
                       child: Icon(Icons.edit, color: Colors.white, size: 14),
                     ),
                   ),
@@ -70,7 +71,7 @@ class ProfilePage extends StatelessWidget {
               itemBuilder: (context, index) {
                 final item = options[index];
                 return ListTile(
-                  leading: Icon(item["icon"], color: Colors.brown),
+                  leading: Icon(item["icon"], color: AppColors.primary),
                   title: Text(item["label"]),
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
                   onTap: () {
@@ -84,7 +85,7 @@ class ProfilePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 4, // Profile is the 5th tab (index starts from 0)
-        selectedItemColor: Color(0xFF4D2C1E),
+        selectedItemColor: AppColors.primary,
         unselectedItemColor: Colors.grey,
         type: BottomNavigationBarType.fixed,
         items: [

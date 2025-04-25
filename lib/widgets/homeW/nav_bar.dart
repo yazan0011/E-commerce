@@ -1,3 +1,4 @@
+import 'package:e_co/app/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavbar extends StatelessWidget {
@@ -50,7 +51,7 @@ class CustomNavbar extends StatelessWidget {
               ),
               child: Icon(
                 icons[index],
-                color: isSelected ? Colors.brown : Colors.grey,
+                color: isSelected ? AppColors.primary : Colors.grey,
                 size: 28,
               ),
             ),
