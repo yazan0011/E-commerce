@@ -72,12 +72,21 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                Row(
+                  children: [
+                    const Icon(Icons.star, size: 16, color: Colors.orange),
+                    Text(rating.toString()),
+                  ],
+                ),
+              ],
+            ),
             Text('\$${price.toStringAsFixed(2)}'),
             Row(
               children: [
-                const Icon(Icons.star, size: 16, color: Colors.orange),
-                Text(rating.toString()),
                 const Spacer(),
                 Icon(
                   wish == 0 ? Icons.favorite_border : Icons.favorite,
