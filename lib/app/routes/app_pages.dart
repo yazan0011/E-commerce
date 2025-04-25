@@ -1,3 +1,4 @@
+import 'package:e_co/app/modules/login/login_view.dart';
 import 'package:e_co/app/modules/wishlist/wishlist_binding.dart';
 import 'package:e_co/app/modules/wishlist/wishlist_view.dart';
 import 'package:get/get.dart';
@@ -24,6 +25,10 @@ class AppPages {
       name: Routes.wishlist,
       page: () => WishlistView(),
       binding: WishlistBinding(),
+    ),
+    GetPage(
+      name: Routes.login,
+      page: () => LoginView(),
     ),
   ];
 }

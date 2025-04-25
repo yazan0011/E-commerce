@@ -1,3 +1,4 @@
+import 'package:e_co/app/modules/login/login_view.dart';
 import 'package:e_co/app/modules/splash/splash_view.dart';
 import 'package:e_co/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.brown,
         useMaterial3: true,
       ),
-      home: const SplashView(),
+      home: LoginView(),
     );
   }
 }
