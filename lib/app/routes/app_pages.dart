@@ -1,4 +1,7 @@
-import 'package:e_co/app/modules/login/login_view.dart';
+import 'package:e_co/app/modules/signIn/signIn_binding.dart';
+import 'package:e_co/app/modules/signIn/signIn_view.dart';
+import 'package:e_co/app/modules/signUp/signUp_binding.dart';
+import 'package:e_co/app/modules/signUp/signUp_view.dart';
 import 'package:e_co/app/modules/wishlist/wishlist_binding.dart';
 import 'package:e_co/app/modules/wishlist/wishlist_view.dart';
 import 'package:get/get.dart';
@@ -27,8 +30,12 @@ class AppPages {
       binding: WishlistBinding(),
     ),
     GetPage(
-      name: Routes.login,
-      page: () => LoginView(),
-    ),
+        name: Routes.signIn,
+        page: () => SignInView(),
+        binding: SignInBinding()),
+    GetPage(
+        name: Routes.signUp,
+        page: () => SignUpView(),
+        binding: SignUpBinding()),
   ];
 }

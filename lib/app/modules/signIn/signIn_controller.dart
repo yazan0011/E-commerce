@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class AuthController extends GetxController {
+class SignInController extends GetxController {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   var isPasswordHidden = true.obs;

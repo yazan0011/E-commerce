@@ -1,16 +1,15 @@
-import 'package:e_co/app/modules/home/home_binding.dart';
-import 'package:e_co/app/modules/home/home_view.dart';
-import 'package:e_co/app/modules/login/login_controller.dart';
-import 'package:e_co/widgets/publicW/elevated_button.dart';
-import 'package:e_co/widgets/publicW/text_feild.dart';
+import 'package:e_co/app/modules/signIn/signIn_view.dart';
+import 'package:e_co/app/modules/signUp/signUp_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:e_co/app/utils/constants.dart';
+import 'package:e_co/widgets/publicW/elevated_button.dart';
+import 'package:e_co/widgets/publicW/text_feild.dart';
 
-class LoginView extends StatelessWidget {
-  LoginView({Key? key}) : super(key: key);
+class SignUpView extends StatelessWidget {
+  SignUpView({Key? key}) : super(key: key);
 
-  final AuthController controller = Get.put(AuthController());
+  final SignUpController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +21,9 @@ class LoginView extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(height: 100),
+                const SizedBox(height: 80),
                 Text(
-                  "Welcome to styliq",
+                  "Create Account",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -34,10 +33,10 @@ class LoginView extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  "Sign In to continue",
+                  "Sign up to get started!",
                   style: TextStyle(color: Colors.grey[600], fontSize: 16),
                 ),
-                const SizedBox(height: 70),
+                const SizedBox(height: 60),
                 CustomTextField(
                   hintText: "Email",
                   controller: controller.emailController,
@@ -52,21 +51,18 @@ class LoginView extends StatelessWidget {
                   icon: Icons.lock,
                 ),
                 const SizedBox(height: 10),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Forgot Password?",
-                      style: TextStyle(color: AppColors.primary),
-                    ),
-                  ),
+                CustomTextField(
+                  hintText: "Confirm Password",
+                  controller: controller.confirmPasswordController,
+                  obscureText: true,
+                  icon: Icons.lock_outline,
                 ),
                 const SizedBox(height: 20),
                 CustomElevatedButton(
-                  text: "Sign In",
+                  text: "Sign Up",
                   onPressed: () {
-                    Get.to(HomeView(), binding: HomeBinding());
+                    // Perform sign-up logic
+                    // Then navigate to HomeView or LoginView
                   },
                 ),
                 const SizedBox(height: 20),
@@ -85,22 +81,26 @@ class LoginView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const SizedBox(width: 20),
-                    socialLoginButton(Icons.g_mobiledata),
+                    socialButton(
+                      icon: Icons.g_mobiledata,
+                    ),
                     const SizedBox(width: 20),
-                    socialLoginButton(Icons.facebook),
+                    socialButton(
+                      icon: Icons.facebook,
+                    ),
                   ],
                 ),
                 const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Don't have an account? "),
+                    const Text("Already have an account? "),
                     GestureDetector(
                       onTap: () {
-                        // Go to sign up page
+                        Get.back(); // Go back to login screen
                       },
                       child: Text(
-                        "Sign Up",
+                        "Sign In",
                         style: TextStyle(
                           color: AppColors.primary,
                           fontWeight: FontWeight.bold,
@@ -108,23 +108,12 @@ class LoginView extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),
         ),
       ),
-    );
-  }
-
-  Widget socialLoginButton(IconData icon) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.grey.shade300),
-      ),
-      child: Icon(icon, size: 30),
     );
   }
 }
