@@ -1,3 +1,5 @@
+import 'package:e_co/app/modules/forgetPassword/email_binding.dart';
+import 'package:e_co/app/modules/forgetPassword/email_view.dart';
 import 'package:e_co/app/modules/signIn/signIn_binding.dart';
 import 'package:e_co/app/modules/signIn/signIn_view.dart';
 import 'package:e_co/app/modules/signUp/signUp_binding.dart';
@@ -37,5 +39,9 @@ class AppPages {
         name: Routes.signUp,
         page: () => SignUpView(),
         binding: SignUpBinding()),
+    GetPage(
+        name: Routes.forget,
+        page: () => ForgetPasswordView(),
+        binding: ForgetPasswordBinding()),
   ];
 }

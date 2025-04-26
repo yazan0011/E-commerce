@@ -1,5 +1,5 @@
 import 'package:e_co/app/utils/constants.dart';
-import 'package:e_co/widgets/homeW/category_icon.dart';
+import 'package:e_co/app/widgets/homeW/category_icon.dart';
 import 'package:flutter/material.dart';
 
 class CategoryDialogContent extends StatelessWidget {

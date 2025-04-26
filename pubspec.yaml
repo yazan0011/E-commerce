@@ -80,11 +80,12 @@ flutter:
     - family: Caveat
       fonts:
         - asset: font/Caveat-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
     - family: WinkySans
       fonts:
         - asset: font/WinkySans-Regular.ttf
+    - family: DMSerifDisplay
+      fonts:
+        - asset: font/DMSerifDisplay-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

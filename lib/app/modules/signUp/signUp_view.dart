@@ -3,8 +3,8 @@ import 'package:e_co/app/modules/signUp/signUp_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:e_co/app/utils/constants.dart';
-import 'package:e_co/widgets/publicW/elevated_button.dart';
-import 'package:e_co/widgets/publicW/text_feild.dart';
+import 'package:e_co/app/widgets/publicW/elevated_button.dart';
+import 'package:e_co/app/widgets/publicW/text_feild.dart';
 
 class SignUpView extends StatelessWidget {
   SignUpView({Key? key}) : super(key: key);

@@ -4,11 +4,11 @@ import 'package:e_co/app/modules/profile/profile_view.dart';
 import 'package:e_co/app/modules/wishlist/wishlist_view.dart';
 import 'package:e_co/app/utils/constants.dart';
 import 'package:e_co/app/utils/helpers.dart';
-import 'package:e_co/widgets/homeW/CategoryDialogContent.dart';
-import 'package:e_co/widgets/homeW/auto_scrol_panel.dart';
-import 'package:e_co/widgets/homeW/category_icon.dart';
-import 'package:e_co/widgets/homeW/nav_bar.dart';
-import 'package:e_co/widgets/homeW/product_card.dart';
+import 'package:e_co/app/widgets/homeW/CategoryDialogContent.dart';
+import 'package:e_co/app/widgets/homeW/auto_scrol_panel.dart';
+import 'package:e_co/app/widgets/homeW/category_icon.dart';
+import 'package:e_co/app/widgets/homeW/nav_bar.dart';
+import 'package:e_co/app/widgets/homeW/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

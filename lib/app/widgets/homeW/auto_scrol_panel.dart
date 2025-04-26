@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:e_co/widgets/homeW/sale_banner.dart';
+import 'package:e_co/app/widgets/homeW/sale_banner.dart';
 import 'package:flutter/material.dart';
 
 class AutoScrollSaleBanner extends StatelessWidget {

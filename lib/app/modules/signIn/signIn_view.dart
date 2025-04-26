@@ -1,10 +1,12 @@
+import 'package:e_co/app/modules/forgetPassword/email_binding.dart';
+import 'package:e_co/app/modules/forgetPassword/email_view.dart';
 import 'package:e_co/app/modules/home/home_binding.dart';
 import 'package:e_co/app/modules/home/home_view.dart';
 import 'package:e_co/app/modules/signIn/signIn_controller.dart';
 import 'package:e_co/app/modules/signUp/signUp_binding.dart';
 import 'package:e_co/app/modules/signUp/signUp_view.dart';
-import 'package:e_co/widgets/publicW/elevated_button.dart';
-import 'package:e_co/widgets/publicW/text_feild.dart';
+import 'package:e_co/app/widgets/publicW/elevated_button.dart';
+import 'package:e_co/app/widgets/publicW/text_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:e_co/app/utils/constants.dart';
@@ -57,7 +59,10 @@ class SignInView extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => ForgetPasswordView(),
+                          binding: ForgetPasswordBinding());
+                    },
                     child: Text(
                       "Forgot Password?",
                       style: TextStyle(color: AppColors.primary),

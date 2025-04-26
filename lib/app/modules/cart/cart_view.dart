@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:e_co/app/utils/helpers.dart';
-import 'package:e_co/widgets/cartW/deletion_dialog.dart';
-import 'package:e_co/widgets/cartW/summary_row.dart';
-import 'package:e_co/widgets/publicW/elevated_button.dart';
-import 'package:e_co/widgets/publicW/text_feild.dart';
+import 'package:e_co/app/widgets/cartW/deletion_dialog.dart';
+import 'package:e_co/app/widgets/cartW/summary_row.dart';
+import 'package:e_co/app/widgets/publicW/elevated_button.dart';
+import 'package:e_co/app/widgets/publicW/text_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'cart_controller.dart';

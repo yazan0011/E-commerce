@@ -1,6 +1,6 @@
 import 'package:e_co/app/modules/wishlist/wishlist_controller.dart';
 import 'package:e_co/app/utils/constants.dart';
-import 'package:e_co/widgets/homeW/product_card.dart';
+import 'package:e_co/app/widgets/homeW/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
