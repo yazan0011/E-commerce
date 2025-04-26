@@ -1,5 +1,4 @@
-import 'package:e_co/app/modules/home/home_binding.dart';
-import 'package:e_co/app/modules/home/home_view.dart';
+import 'package:e_co/app/modules/login/login_view.dart';
 import 'package:e_co/app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -177,7 +176,7 @@ class _OnboardingViewState extends State<OnboardingView> {
               child: ElevatedButton(
                 onPressed: () {
                   if (onLastPage) {
-                    Get.to(() => HomeView(), binding: HomeBinding());
+                    Get.to(() => LoginView());
                   } else {
                     _controller.nextPage(
                       duration: const Duration(milliseconds: 400),

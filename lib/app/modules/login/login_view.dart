@@ -1,9 +1,11 @@
+import 'package:e_co/app/modules/home/home_binding.dart';
+import 'package:e_co/app/modules/home/home_view.dart';
 import 'package:e_co/app/modules/login/login_controller.dart';
 import 'package:e_co/widgets/publicW/elevated_button.dart';
 import 'package:e_co/widgets/publicW/text_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:e_co/app/utils/constants.dart'; // عشان الألوان
+import 'package:e_co/app/utils/constants.dart';
 
 class LoginView extends StatelessWidget {
   LoginView({Key? key}) : super(key: key);
@@ -40,14 +42,14 @@ class LoginView extends StatelessWidget {
                   hintText: "Email",
                   controller: controller.emailController,
                   keyboardType: TextInputType.emailAddress,
-                  prefixIcon: Icons.email,
+                  icon: Icons.email,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 10),
                 CustomTextField(
                   hintText: "Password",
                   controller: controller.passwordController,
                   obscureText: true,
-                  prefixIcon: Icons.lock,
+                  icon: Icons.lock,
                 ),
                 const SizedBox(height: 10),
                 Align(
@@ -63,7 +65,9 @@ class LoginView extends StatelessWidget {
                 const SizedBox(height: 20),
                 CustomElevatedButton(
                   text: "Sign In",
-                  onPressed: () => controller.login(),
+                  onPressed: () {
+                    Get.to(HomeView(), binding: HomeBinding());
+                  },
                 ),
                 const SizedBox(height: 20),
                 Row(

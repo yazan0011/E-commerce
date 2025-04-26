@@ -126,8 +126,10 @@ class CartView extends StatelessWidget {
                         Expanded(
                             flex: 3,
                             child: CustomTextField(
-                                hintText: 'promo code',
-                                controller: tcontroller)),
+                              hintText: 'promo code',
+                              controller: tcontroller,
+                              icon: null,
+                            )),
                         SizedBox(width: 10),
                         Expanded(
                             child: CustomElevatedButton(
