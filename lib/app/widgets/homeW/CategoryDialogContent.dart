@@ -17,6 +17,8 @@ class CategoryDialogContent extends StatelessWidget {
     {'label': 'Scarf', 'icon': Icons.ac_unit},
   ];
 
+  CategoryDialogContent({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Material(

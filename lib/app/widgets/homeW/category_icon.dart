@@ -5,7 +5,7 @@ class CategoryIcon extends StatelessWidget {
   final String label;
   final IconData icon;
 
-  const CategoryIcon({required this.label, required this.icon});
+  const CategoryIcon({super.key, required this.label, required this.icon});
 
   @override
   Widget build(BuildContext context) {

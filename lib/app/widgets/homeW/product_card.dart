@@ -13,6 +13,7 @@ class ProductCard extends StatelessWidget {
   final int wish;
 
   const ProductCard({
+    super.key,
     required this.image,
     required this.name,
     required this.price,

@@ -7,6 +7,7 @@ class SaleBanner extends StatelessWidget {
   final String imageUrl;
 
   const SaleBanner({
+    super.key,
     required this.title,
     required this.subtitle,
     required this.color,
