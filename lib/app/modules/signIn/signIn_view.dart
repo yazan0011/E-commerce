@@ -1,7 +1,8 @@
+import 'package:e_co/app/modules/completeProfile/complete_profile_binding.dart';
+import 'package:e_co/app/modules/completeProfile/complete_profile_view.dart';
 import 'package:e_co/app/modules/forgetPassword/email_binding.dart';
 import 'package:e_co/app/modules/forgetPassword/email_view.dart';
-import 'package:e_co/app/modules/home/home_binding.dart';
-import 'package:e_co/app/modules/home/home_view.dart';
+
 import 'package:e_co/app/modules/signIn/signIn_controller.dart';
 import 'package:e_co/app/modules/signUp/signUp_binding.dart';
 import 'package:e_co/app/modules/signUp/signUp_view.dart';
@@ -73,7 +74,8 @@ class SignInView extends StatelessWidget {
                 CustomElevatedButton(
                   text: "Sign In",
                   onPressed: () {
-                    Get.to(HomeView(), binding: HomeBinding());
+                    Get.to(CompleteProfileView(),
+                        binding: CompleteProfileBinding());
                   },
                 ),
                 const SizedBox(height: 20),

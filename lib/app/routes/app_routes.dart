@@ -8,4 +8,5 @@ abstract class Routes {
   static const signIn = '/login';
   static const signUp = '/register';
   static const forget = '/forget';
+  static const compProfile = '/compProfile';
 }

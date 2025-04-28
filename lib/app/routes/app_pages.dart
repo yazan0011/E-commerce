@@ -1,3 +1,5 @@
+import 'package:e_co/app/modules/completeProfile/complete_profile_binding.dart';
+import 'package:e_co/app/modules/completeProfile/complete_profile_view.dart';
 import 'package:e_co/app/modules/forgetPassword/email_binding.dart';
 import 'package:e_co/app/modules/forgetPassword/email_view.dart';
 import 'package:e_co/app/modules/signIn/signIn_binding.dart';
@@ -43,5 +45,9 @@ class AppPages {
         name: Routes.forget,
         page: () => ForgetPasswordView(),
         binding: ForgetPasswordBinding()),
+    GetPage(
+        name: Routes.compProfile,
+        page: () => CompleteProfileView(),
+        binding: CompleteProfileBinding()),
   ];
 }
