@@ -24,7 +24,7 @@ class _OnboardingViewState extends State<OnboardingView> {
           "Explore the latest trends in fashion. Your style journey begins here."
     },
     {
-      "image": "images/pexels-photo-842811.jpeg",
+      "image": "images/undefined-266781-1535902101411-main.jpg",
       "title": "Curated Just for You",
       "description": "Find outfits that match your vibe, mood, and lifestyle."
     },
@@ -68,26 +68,24 @@ class _OnboardingViewState extends State<OnboardingView> {
                                   left: 0,
                                   child: Transform.rotate(
                                     angle: -0.2,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Image.asset(
-                                        onboardingData[0]["image"]!,
-                                        height: 180,
-                                        width: 120,
-                                        fit: BoxFit.cover,
+                                    child: Container(
+                                      decoration: BoxDecoration(boxShadow: [
+                                        BoxShadow(
+                                            blurRadius: 12,
+                                            spreadRadius: 2,
+                                            offset: Offset(0, 0),
+                                            color: const Color.fromARGB(
+                                                255, 189, 189, 189)),
+                                      ]),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          onboardingData[0]["image"]!,
+                                          height: 180,
+                                          width: 120,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  top: 0,
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(26),
-                                    child: Image.asset(
-                                      onboardingData[1]["image"]!,
-                                      height: 220,
-                                      width: 140,
-                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
@@ -96,12 +94,44 @@ class _OnboardingViewState extends State<OnboardingView> {
                                   right: 0,
                                   child: Transform.rotate(
                                     angle: 0.2,
+                                    child: Container(
+                                      decoration: BoxDecoration(boxShadow: [
+                                        BoxShadow(
+                                            blurRadius: 12,
+                                            spreadRadius: 2,
+                                            offset: Offset(0, 0),
+                                            color: const Color.fromARGB(
+                                                255, 189, 189, 189)),
+                                      ]),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/nybg-1-data.jpg',
+                                          height: 180,
+                                          width: 120,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  child: Container(
+                                    decoration: BoxDecoration(boxShadow: [
+                                      BoxShadow(
+                                          blurRadius: 12,
+                                          spreadRadius: 2,
+                                          offset: Offset(0, 0),
+                                          color: const Color.fromARGB(
+                                              255, 219, 219, 219)),
+                                    ]),
                                     child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
+                                      borderRadius: BorderRadius.circular(26),
                                       child: Image.asset(
-                                        onboardingData[2]["image"]!,
-                                        height: 180,
-                                        width: 120,
+                                        'images/date-hero-mens-mb-data.jpg',
+                                        height: 220,
+                                        width: 140,
                                         fit: BoxFit.cover,
                                       ),
                                     ),
