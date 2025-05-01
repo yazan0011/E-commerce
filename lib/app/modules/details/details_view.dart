@@ -1,9 +1,13 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:e_co/app/modules/details/details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class DetailsView extends StatelessWidget {
   final DetailsController controller = Get.find<DetailsController>();
+
+  DetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +17,7 @@ class DetailsView extends StatelessWidget {
           children: [
             Obx(() => Stack(
                   children: [
-                    // Main image carousel
-                    Container(
+                    SizedBox(
                       height: 400,
                       width: double.infinity,
                       child: PageView.builder(
