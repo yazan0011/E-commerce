@@ -57,7 +57,6 @@ class DetailsView extends StatelessWidget {
                       ),
                     ),
 
-                    // Dots indicator
                     Positioned(
                       bottom: 10,
                       left: 0,

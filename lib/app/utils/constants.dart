@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const primary = Colors.brown;
-  static const background = Color(0xFFF5F5F5); // Soft white
+  static const background = Colors.white; // Soft white
   static const grey = Colors.grey;
+  static const black = Colors.black;
 }
 
 class AppTextStyles {
