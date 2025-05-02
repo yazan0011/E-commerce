@@ -24,9 +24,8 @@ class HomeView extends StatelessWidget {
                       homeContent(), // 0
                       WishlistView(), // 1
                       WishlistView(), // 2
-                      CartView(), // 2
+                      CartView(), // 3
                       ProfilePage(), // 3
-                      // ProfileTabContent(),     // 4
                     ],
                   )),
             ),
