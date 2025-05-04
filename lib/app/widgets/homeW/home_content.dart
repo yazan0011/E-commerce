@@ -1,3 +1,5 @@
+import 'package:e_co/app/modules/filter/filter_binding.dart';
+import 'package:e_co/app/modules/filter/filter_view.dart';
 import 'package:e_co/app/modules/home/home_controller.dart';
 import 'package:e_co/app/utils/constants.dart';
 import 'package:e_co/app/utils/helpers.dart';
@@ -46,7 +48,7 @@ class homeContent extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
-              children: const [
+              children: [
                 Icon(Icons.search, color: AppColors.primary),
                 SizedBox(width: 8),
                 Expanded(
@@ -55,7 +57,15 @@ class homeContent extends StatelessWidget {
                         border: InputBorder.none, hintText: 'Search'),
                   ),
                 ),
-                Icon(Icons.tune, color: AppColors.primary),
+                IconButton(
+                  icon: Icon(
+                    Icons.tune,
+                    color: AppColors.primary,
+                  ),
+                  onPressed: () {
+                    Get.to(() => Filterview(), binding: FilterBinding());
+                  },
+                ),
               ],
             ),
           ),
@@ -63,7 +73,6 @@ class homeContent extends StatelessWidget {
           // New Collection
           AutoScrollSaleBanner(),
           const SizedBox(height: 16),
-          // Category
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
