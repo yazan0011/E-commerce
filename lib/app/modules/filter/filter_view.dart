@@ -1,4 +1,6 @@
 import 'package:e_co/app/modules/filter/filter_contoller.dart';
+import 'package:e_co/app/utils/constants.dart';
+import 'package:e_co/app/widgets/publicW/elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,7 +24,15 @@ class Filterview extends StatelessWidget {
                       final isSelected =
                           controller.selectedBrand.value == brand;
                       return ChoiceChip(
-                        label: Text(brand),
+                        checkmarkColor: Colors.white,
+                        backgroundColor: Colors.white,
+                        selectedColor: const Color.fromARGB(255, 155, 127, 116),
+                        label: Text(
+                          brand,
+                          style: TextStyle(
+                              color:
+                                  isSelected ? Colors.white : Colors.black54),
+                        ),
                         selected: isSelected,
                         onSelected: (_) =>
                             controller.selectedBrand.value = brand,
@@ -36,7 +46,15 @@ class Filterview extends StatelessWidget {
                       final isSelected =
                           controller.selectedGender.value == gender;
                       return ChoiceChip(
-                        label: Text(gender),
+                        checkmarkColor: Colors.white,
+                        backgroundColor: Colors.white,
+                        selectedColor: const Color.fromARGB(255, 155, 127, 116),
+                        label: Text(
+                          gender,
+                          style: TextStyle(
+                              color:
+                                  isSelected ? Colors.white : Colors.black54),
+                        ),
                         selected: isSelected,
                         onSelected: (_) =>
                             controller.selectedGender.value = gender,
@@ -49,7 +67,15 @@ class Filterview extends StatelessWidget {
                     children: controller.sortOptions.map((sort) {
                       final isSelected = controller.selectedSort.value == sort;
                       return ChoiceChip(
-                        label: Text(sort),
+                        checkmarkColor: Colors.white,
+                        backgroundColor: Colors.white,
+                        selectedColor: const Color.fromARGB(255, 155, 127, 116),
+                        label: Text(
+                          sort,
+                          style: TextStyle(
+                              color:
+                                  isSelected ? Colors.white : Colors.black54),
+                        ),
                         selected: isSelected,
                         onSelected: (_) => controller.selectedSort.value = sort,
                       );
@@ -57,6 +83,7 @@ class Filterview extends StatelessWidget {
                   )),
               _buildSectionTitle("Pricing Range"),
               Obx(() => RangeSlider(
+                    activeColor: const Color.fromARGB(255, 155, 127, 116),
                     values: controller.priceRange.value,
                     min: 2,
                     max: 150,
@@ -73,6 +100,7 @@ class Filterview extends StatelessWidget {
               Obx(() => Column(
                     children: controller.reviewOptions.map((rating) {
                       return RadioListTile<double>(
+                        activeColor: const Color.fromARGB(255, 155, 127, 116),
                         value: rating,
                         groupValue: controller.selectedRating.value,
                         onChanged: (val) {
@@ -97,17 +125,14 @@ class Filterview extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: OutlinedButton(
-                      onPressed: controller.resetFilters,
-                      child: const Text("Reset Filter"),
-                    ),
+                    child: CustomElevatedButton(
+                        onPressed: controller.resetFilters,
+                        text: 'Reset Filter'),
                   ),
                   const SizedBox(width: 16),
                   Expanded(
-                    child: ElevatedButton(
-                      onPressed: controller.applyFilters,
-                      child: const Text("Apply"),
-                    ),
+                    child: CustomElevatedButton(
+                        onPressed: controller.applyFilters, text: 'Apply'),
                   ),
                 ],
               ),
